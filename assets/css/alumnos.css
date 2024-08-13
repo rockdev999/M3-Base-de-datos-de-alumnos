@@ -1,0 +1,35 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.controles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+  padding-bottom: 20px;
+  /* margin-bottom: 2px; */
+  border-bottom: 2px solid gray;
+}
+.button-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.buscar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 15px;
+}
+.choose {
+  width: 15%;
+  height: 38px;
+}
+.listAlumnos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 1px;
+}

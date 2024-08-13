@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- boostrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- BOOTSTRAP JS -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Mi CSS -->
+    <link rel="stylesheet" href="./assets/css/home.css" />
+    <link rel="stylesheet" href="./assets/css/alumnos.css" />
+    <!-- Mi JS -->
+    <script defer type="module" src="./assets/js/alumnos.js"></script>
+    <!-- <script defer type="module" src="./assets/js/home.js"></script> -->
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img
+              id="principal"
+              class="icon"
+              src="./assets/images/logo-small.png"
+              alt=""
+          /></a>
+          <div id="logout">
+            <button class="btn btn-secondary search" type="submit">
+              Cerrar Sesion
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="controles">
+        <section class="button-options">
+          <div>
+            <button id="listaAluButton" type="button" class="btn btn-success">
+              Listar Cursos
+            </button>
+          </div>
+          <div>
+            <button
+              id="agregarAlu"
+              type="button"
+              class="btn btn-success"
+              data-bs-toggle="modal"
+              data-bs-target="#formAgregarAlu"
+            >
+              Agregar Nuevo Curso
+            </button>
+          </div>
+        </section>
+        <section>
+          <div class="buscar">
+            <select
+              class="form-select choose"
+              aria-label="Default select example"
+              id="optionsSearch"
+            >
+              <option name="mySelectName" selected>Buscar</option>
+              <option value="1">CI</option>
+              <option value="2">Nombre</option>
+              <option value="3">Apellido</option>
+            </select>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="inputSearch"
+                placeholder="ingrese datos"
+              />
+            </div>
+            <div>
+              <button id="search" type="button" class="btn btn-info">
+                Buscar
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- Modal -->
+      <section>
+        <div
+          class="modal fade"
+          id="formAgregarAlu"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  Alta de Alumnos
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <!-- FORMULARIO DE INSCRIPCION -->
+                <form action="">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    ><strong>Nombres</strong></label
+                  >
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputNombre"
+                      placeholder="input-firstname"
+                    />
+                    <label for="camara">Ingrese nombres</label>
+                  </div>
+                  <label for="exampleFormControlInput1" class="form-label"
+                    ><strong>Apellidos</strong></label
+                  >
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputApellido"
+                      placeholder="input-lastname"
+                    />
+                    <label for="camara">Ingrese apellidos</label>
+                  </div>
+                  <label for="exampleFormControlInput1" class="form-label"
+                    ><strong>Cedula de Identidad</strong></label
+                  >
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputCI"
+                      placeholder="input-ci"
+                    />
+                    <label for="imagen">Ingrese CI</label>
+                  </div>
+                  <label for="exampleFormControlInput1" class="form-label"
+                    ><strong>Edad</strong></label
+                  >
+                  <div class="form-floating mb-3">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="inputEdad"
+                      placeholder="input-age"
+                    />
+                    <label for="imagen">Ingrese edad</label>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cancelar
+                </button>
+                <button id="guardarAlu" type="button" class="btn btn-success">
+                  Incribir
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="indicelistAlumnos" class="listAlumnos">
+        <table class="table table-striped m-4">
+          <thead class="table-success">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">CI</th>
+              <th scope="col">Nombres</th>
+              <th scope="col">Apellidos</th>
+              <th scope="col">Edad</th>
+            </tr>
+          </thead>
+          <tbody id="listaDeAlumnos" class="table-group-divider"></tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>

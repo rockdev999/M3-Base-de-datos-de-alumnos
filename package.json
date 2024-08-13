@@ -1,0 +1,13 @@
+{
+  "name": "base-de-datos-de-alumnos",
+  "version": "1.0.0",
+  "description": "Base de Datos para alumnos con HTML, CSS, Bootstrap y JS, tambien tiene agregado algo de LocalStorage",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
