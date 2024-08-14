@@ -21,7 +21,7 @@ export class Alumno {
 export class Grupo {
   constructor(name_group, materias) {
     this.name_group = name_group;
-    this.materias = materias;
+    this.materias = null;
   }
 }
 

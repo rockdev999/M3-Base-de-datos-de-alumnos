@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="./assets/css/home.css" />
     <link rel="stylesheet" href="./assets/css/alumnos.css" />
     <!-- Mi JS -->
-    <script defer type="module" src="./assets/js/alumnos.js"></script>
+    <script defer type="module" src="./assets/js/cursos.js"></script>
     <!-- <script defer type="module" src="./assets/js/home.js"></script> -->
     <title>Document</title>
   </head>
@@ -54,17 +54,17 @@
           </div>
           <div>
             <button
-              id="agregarAlu"
+              id="agregarCursoP"
               type="button"
               class="btn btn-success"
               data-bs-toggle="modal"
-              data-bs-target="#formAgregarAlu"
+              data-bs-target="#fromAgregarCursoP"
             >
               Agregar Nuevo Curso
             </button>
           </div>
         </section>
-        <section>
+        <!-- <section>
           <div class="buscar">
             <select
               class="form-select choose"
@@ -90,13 +90,13 @@
               </button>
             </div>
           </div>
-        </section>
+        </section> -->
       </div>
       <!-- Modal -->
       <section>
         <div
           class="modal fade"
-          id="formAgregarAlu"
+          id="fromAgregarCursoP"
           tabindex="-1"
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
@@ -105,7 +105,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">
-                  Alta de Alumnos
+                  Agregar Curso
                 </h1>
                 <button
                   type="button"
@@ -118,52 +118,28 @@
                 <!-- FORMULARIO DE INSCRIPCION -->
                 <form action="">
                   <label for="exampleFormControlInput1" class="form-label"
-                    ><strong>Nombres</strong></label
+                    ><strong>Nombre del Curso</strong></label
                   >
                   <div class="form-floating mb-3">
                     <input
                       type="text"
                       class="form-control"
-                      id="inputNombre"
+                      id="inputNomCurso"
                       placeholder="input-firstname"
                     />
-                    <label for="camara">Ingrese nombres</label>
+                    <label for="camara">Ingrese nombre</label>
                   </div>
                   <label for="exampleFormControlInput1" class="form-label"
-                    ><strong>Apellidos</strong></label
-                  >
-                  <div class="form-floating mb-3">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="inputApellido"
-                      placeholder="input-lastname"
-                    />
-                    <label for="camara">Ingrese apellidos</label>
-                  </div>
-                  <label for="exampleFormControlInput1" class="form-label"
-                    ><strong>Cedula de Identidad</strong></label
-                  >
-                  <div class="form-floating mb-3">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="inputCI"
-                      placeholder="input-ci"
-                    />
-                    <label for="imagen">Ingrese CI</label>
-                  </div>
-                  <label for="exampleFormControlInput1" class="form-label"
-                    ><strong>Edad</strong></label
+                    ><strong>Nro. de Materias</strong></label
                   >
                   <div class="form-floating mb-3">
                     <input
                       type="number"
                       class="form-control"
-                      id="inputEdad"
-                      placeholder="input-age"
+                      id="inputNroMat"
+                      placeholder="input-ci"
                     />
-                    <label for="imagen">Ingrese edad</label>
+                    <label for="imagen">Ingrese nro</label>
                   </div>
                 </form>
               </div>
@@ -175,8 +151,8 @@
                 >
                   Cancelar
                 </button>
-                <button id="guardarAlu" type="button" class="btn btn-success">
-                  Incribir
+                <button id="agregarCurso" type="button" class="btn btn-success">
+                  Agregar
                 </button>
               </div>
             </div>
