@@ -21,15 +21,15 @@ export class Alumno {
 export class Grupo {
   constructor(name_group, materias) {
     this.name_group = name_group;
-    this.materias = null;
+    this.materias = materias;
   }
 }
 
 export class Materia {
-  constructor(nom_materia, docente, horario, alumnos) {
+  constructor(nom_materia, docente, horario) {
     this.nom_materia = nom_materia;
     this.docente = docente;
     this.horario = horario;
-    this.alumnos = alumnos;
+    this.alumnos = null;
   }
 }

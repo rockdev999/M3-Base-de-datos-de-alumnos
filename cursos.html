@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="./assets/css/home.css" />
     <link rel="stylesheet" href="./assets/css/alumnos.css" />
     <!-- Mi JS -->
-    <script defer type="module" src="./assets/js/cursos.js"></script>
+    <script defer type="module" src="./assets/js/grupos.js"></script>
     <!-- <script defer type="module" src="./assets/js/home.js"></script> -->
     <title>Document</title>
   </head>
@@ -49,18 +49,18 @@
         <section class="button-options">
           <div>
             <button id="listaAluButton" type="button" class="btn btn-success">
-              Listar Cursos
+              Listar Grupos
             </button>
           </div>
           <div>
             <button
-              id="agregarCursoP"
+              id="agregarGrupoP"
               type="button"
               class="btn btn-success"
               data-bs-toggle="modal"
-              data-bs-target="#fromAgregarCursoP"
+              data-bs-target="#fromAgregarGrupoP"
             >
-              Agregar Nuevo Curso
+              Agregar Nuevo Grupo
             </button>
           </div>
         </section>
@@ -96,7 +96,7 @@
       <section>
         <div
           class="modal fade"
-          id="fromAgregarCursoP"
+          id="fromAgregarGrupoP"
           tabindex="-1"
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
@@ -105,7 +105,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">
-                  Agregar Curso
+                  Agregar Grupo
                 </h1>
                 <button
                   type="button"
@@ -124,22 +124,10 @@
                     <input
                       type="text"
                       class="form-control"
-                      id="inputNomCurso"
+                      id="inputNomGrupo"
                       placeholder="input-firstname"
                     />
                     <label for="camara">Ingrese nombre</label>
-                  </div>
-                  <label for="exampleFormControlInput1" class="form-label"
-                    ><strong>Nro. de Materias</strong></label
-                  >
-                  <div class="form-floating mb-3">
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="inputNroMat"
-                      placeholder="input-ci"
-                    />
-                    <label for="imagen">Ingrese nro</label>
                   </div>
                 </form>
               </div>
@@ -151,8 +139,92 @@
                 >
                   Cancelar
                 </button>
-                <button id="agregarCurso" type="button" class="btn btn-success">
-                  Agregar
+                <button
+                  id="agregarMaterias"
+                  type="button"
+                  class="btn btn-success"
+                  data-bs-toggle="modal"
+                  data-bs-target="#agregandoMat"
+                >
+                  Agregar Materias
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="agregandoMat"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5">Agregando Materias</h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form action="">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    ><strong>Materia</strong></label
+                  >
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputNomMat"
+                      placeholder="input-firstname"
+                    />
+                    <label for="camara">Ingrese materia</label>
+                  </div>
+                  <label for="exampleFormControlInput1" class="form-label"
+                    ><strong>Docente</strong></label
+                  >
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputNomDoc"
+                      placeholder="input-lastname"
+                    />
+                    <label for="camara">Ingrese nombre del docente</label>
+                  </div>
+                  <label for="exampleFormControlInput1" class="form-label"
+                    ><strong>Horario</strong></label
+                  >
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputHorario"
+                      placeholder="input-ci"
+                    />
+                    <label for="imagen"
+                      >Ingrese horario ej: 12:00 - 15:00</label
+                    >
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  id="terminar"
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Terminar
+                </button>
+                <button id="adicionarMat" type="button" class="btn btn-success">
+                  Guardar Materia
                 </button>
               </div>
             </div>
@@ -160,20 +232,7 @@
         </div>
       </section>
 
-      <section id="indicelistAlumnos" class="listAlumnos">
-        <table class="table table-striped m-4">
-          <thead class="table-success">
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">CI</th>
-              <th scope="col">Nombres</th>
-              <th scope="col">Apellidos</th>
-              <th scope="col">Edad</th>
-            </tr>
-          </thead>
-          <tbody id="listaDeAlumnos" class="table-group-divider"></tbody>
-        </table>
-      </section>
+      <section id="indicelistAlumnos" class="listGrupos"></section>
     </main>
   </body>
 </html>
