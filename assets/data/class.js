@@ -4,8 +4,10 @@ export class Alumno {
     this.last_name = last;
     this.ci = ci;
     this.age = age;
-    this.subjects = null;
-    this.qualification = null;
+    this.p_nota = 0;
+    this.s_nota = 0;
+    this.t_nota = 0;
+    this.notafinal = 0;
   }
   getFirst_name() {
     return this.first_name;
@@ -15,6 +17,18 @@ export class Alumno {
   }
   getci() {
     return this.ci;
+  }
+  setPnota(nota) {
+    this.p_nota = nota;
+  }
+  setSnota(nota) {
+    this.s_nota = nota;
+  }
+  setTnota(nota) {
+    this.t_nota = nota;
+  }
+  actualizaFnota() {
+    this.notafinal = (this.p_nota + this.s_nota + this.t_nota) / 3;
   }
 }
 

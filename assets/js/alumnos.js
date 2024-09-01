@@ -1,6 +1,5 @@
 import { Alumno } from "../data/class.js";
 import { formValues, onChangeInput } from "./controllers/controllers.js";
-// import * as log from "./home.js";
 import { buscarCi, buscarNom, buscarApe } from "./controllers/controllers.js";
 
 let usuarioLogueado = JSON.parse(localStorage.getItem("usuarioRegistrado"));
@@ -29,7 +28,7 @@ logoutButton.addEventListener("click", function () {
   window.location = "../../index.html";
 });
 
-export let alumnos = JSON.parse(localStorage.getItem("alumnos")) || [];
+let alumnos = JSON.parse(localStorage.getItem("alumnos")) || [];
 // CREA EL NUEVO EL OBJETO
 const createNewStudent = (alumno) => {
   // console.log(alumno);
@@ -178,3 +177,25 @@ const clearForm = () => {
   inputCI.value = "";
   inputEdad.value = "";
 };
+
+export { alumnos };
+
+// console.log("asdasd");
+// console.log(alumnos[2].getci() + "dsfsf");
+
+// Recuperar los datos del localStorage
+
+// Convertir cada objeto en una instancia de la clase Alumno
+// alumnos = alumnos.map(
+//   (alumnoData) =>
+//     new Alumno(
+//       alumnoData.first_name,
+//       alumnoData.last_name,
+//       alumnoData.ci,
+//       alumnoData.age
+//     )
+// );
+
+// Ahora alumnosT_Fisi contiene instancias de Alumno con los métodos disponibles.
+// console.log("asdasd");
+// console.log(alumnos[13].getci() + "dsfsf");
