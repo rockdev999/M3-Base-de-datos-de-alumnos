@@ -3,9 +3,218 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <!-- boostrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- BOOTSTRAP JS -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Mi CSS -->
+    <link rel="stylesheet" href="../assets/css/alumnos.css" />
+    <!-- Mi JS -->
+    <script defer type="module" src="../assets/js/materias/t_quimi.js"></script>
+    <title>Materia</title>
   </head>
   <body>
-    T quimica
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img
+              id="principal"
+              class="icon"
+              src="../assets/images/logo-small.png"
+              alt=""
+          /></a>
+          <div>
+            <p class="fs-2 fw-bolder">TERCERO: Quimica</p>
+          </div>
+          <div id="logout">
+            <button class="btn btn-secondary search" type="submit">
+              Cerrar Sesion
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div>
+        <p
+          class="mt-3 fs-4 fw-bolder border-4 rounded-4 border border-success text-center mx-auto p-2"
+          style="width: 400px"
+        >
+          Docente: Maria Torrez<br />
+          Viernes<br />12:00 - 15:00
+        </p>
+      </div>
+      <div class="controles">
+        <section class="button-options">
+          <div>
+            <button id="listaAluButton" type="button" class="btn btn-success">
+              Mostrar lista
+            </button>
+          </div>
+          <div>
+            <button
+              id="agregarAlu"
+              type="button"
+              class="btn btn-success"
+              data-bs-toggle="modal"
+              data-bs-target="#formAgregarAlu"
+            >
+              Agregar Alumno
+            </button>
+          </div>
+        </section>
+        <section>
+          <div class="buscar">
+            <select
+              class="form-select choose"
+              aria-label="Default select example"
+              id="optionsSearch"
+            >
+              <option name="mySelectName" selected>Buscar</option>
+              <option value="1">CI</option>
+              <option value="2">Nombre</option>
+              <option value="3">Apellido</option>
+            </select>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="inputSearch"
+                placeholder="ingrese datos"
+              />
+            </div>
+            <div>
+              <button id="search" type="button" class="btn btn-info">
+                Buscar
+              </button>
+            </div>
+          </div>
+        </section>
+        <div class="d-flex justify-content-around">
+          <button id="ordAsc" type="button" class="btn btn-success">
+            Ordenado Ascendente
+          </button>
+          <button id="ordDsc" type="button" class="btn btn-success">
+            Ordenado Descendente
+          </button>
+        </div>
+      </div>
+      <!-- Modal -->
+      <section>
+        <div
+          class="modal fade"
+          id="formAgregarAlu"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  Lista de Alumnos
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <!-- lista de alumnos -->
+              <div id="mostrar_lista" class="modal-body">
+                <table class="table table-striped m-1">
+                  <thead class="table-success">
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Marca</th>
+                      <th scope="col">CI</th>
+                      <th scope="col">Nombres</th>
+                      <th scope="col">Apellidos</th>
+                      <th scope="col">Edad</th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    id="listaDeAlumnos"
+                    class="table-group-divider"
+                  ></tbody>
+                </table>
+              </div>
+              <!-- hasta aqui termina la lsita alumnos -->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cancelar
+                </button>
+                <button
+                  id="agregarAlumnos"
+                  type="button"
+                  class="btn btn-success"
+                >
+                  Agregar Alumnos
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="indicelistAlumnos" class="listAlumnos">
+        <table class="table table-striped m-4">
+          <thead class="table-success">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">CI</th>
+              <th scope="col">Nombres</th>
+              <th scope="col">Apellidos</th>
+              <th scope="col">Edad</th>
+              <th scope="col">1er Trim</th>
+              <th scope="col">2do Trim</th>
+              <th scope="col">3er Trim</th>
+              <th scope="col">NF</th>
+            </tr>
+          </thead>
+          <tbody id="listaAlumnosMat" class="table-group-divider"></tbody>
+          <tfoot class="table-success">
+            <tr>
+              <th scope="row" colspan="7"></th>
+              <th scope="row" colspan="8">
+                <button id="guardarnotas" type="button" class="btn btn-success">
+                  Guardar
+                </button>
+              </th>
+            </tr>
+            <tr>
+              <th scope="row" colspan="3"></th>
+              <th colspan="6" class="d-flex justify-content-center mx-auto">
+                El Promedio del grupo es:
+              </th>
+              <th colspan="8">
+                <div
+                  id="promedioCursoT"
+                  class="number-display d-flex justify-content-center"
+                >
+                  0
+                </div>
+              </th>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+    </main>
   </body>
 </html>
