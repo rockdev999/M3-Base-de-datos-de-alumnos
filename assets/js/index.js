@@ -1,7 +1,4 @@
 import cuentas from "../data/users.js";
-// import cuentas from "../data/users.js" assert {type:'json'}
-
-// import {default as data} from "../data/users"
 let usuarioLogueado = null;
 
 function login(usuario, password) {
@@ -28,7 +25,6 @@ usuario.addEventListener("change", function (event) {
 password.addEventListener("change", function (event) {
   console.log("Password =", event.target.value);
   passwordIngresado = parseInt(event.target.value);
-  // console.log(typeof passwordIngresado);
 });
 
 loginButton.addEventListener("click", function (event) {

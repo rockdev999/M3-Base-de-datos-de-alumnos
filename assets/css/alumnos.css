@@ -1,5 +1,4 @@
 .icon {
-  /* background-color: blue; */
   width: 60px;
   height: 50px;
   margin-left: 10px;
@@ -15,7 +14,6 @@ main {
   justify-content: center;
   margin: 20px;
   padding-bottom: 20px;
-  /* margin-bottom: 2px; */
   border-bottom: 2px solid gray;
 }
 .button-options {
