@@ -11,7 +11,6 @@ let alumnos = JSON.parse(localStorage.getItem("alumnos"));
 console.log(alumnos);
 
 let usuarioLogueado = JSON.parse(localStorage.getItem("usuarioRegistrado"));
-// // let lalumnos = lalumnos;
 
 let principalButton = document.getElementById("principal");
 let logoutButton = document.getElementById("logout");
@@ -44,7 +43,6 @@ logoutButton.addEventListener("click", function () {
 
 let alumnosT_Fisi = JSON.parse(localStorage.getItem("alumnosT_Fisi")) || [];
 const showStudents = (alumnos) => {
-  // listaAlumnos.innerHTML += `aaaa`;
   let llistAlumnosHTML = "";
   let i = 0;
   alumnos.forEach((alumno) => {
@@ -67,10 +65,7 @@ const showStudents = (alumnos) => {
 
 showStudents(alumnos);
 
-// let alumnosT_Fisi = [];
-
 agregarAlumnosButton.addEventListener("click", () => {
-  //   const selectedAlumnos = [];
   alumnos.forEach((alumno, index) => {
     const checkbox = document.getElementById(`alumno-${index}`);
     if (checkbox.checked) {
@@ -81,7 +76,6 @@ agregarAlumnosButton.addEventListener("click", () => {
 });
 
 const showStudentsPrincipal = (alumnosT_Fisi) => {
-  // listaAlumnos.innerHTML += `aaaa`;
   let llistAlumnosHTML = "";
   let i = 0;
   alumnosT_Fisi.forEach((alumno) => {
@@ -120,7 +114,6 @@ const showStudentsPrincipal = (alumnosT_Fisi) => {
 listaAluButton.addEventListener("click", function () {
   showStudentsPrincipal(alumnosT_Fisi);
   promedioCursoT.innerHTML = `${promedioCurso(alumnosT_Fisi).toFixed(1)}`;
-  // actualizaNotasAlu(alumnosT_Fisi);
 });
 
 function actualizaNotasAlu(alumnosT_Fisi) {
@@ -129,9 +122,7 @@ function actualizaNotasAlu(alumnosT_Fisi) {
     const inputPNota = document.getElementById(`pnota${i + 1}${alumno.ci}`);
     const inputSNota = document.getElementById(`snota${i + 1}${alumno.ci}`);
     const inputTNota = document.getElementById(`tnota${i + 1}${alumno.ci}`);
-    // console.log(
-    //   inputPNota.value + " aa " + inputSNota + " bb " + inputTNota + " cc "
-    // );
+
     if (inputPNota && inputSNota && inputTNota) {
       alumno.p_nota = parseFloat(inputPNota.value) || 0;
       alumno.s_nota = parseFloat(inputSNota.value) || 0;
@@ -143,28 +134,9 @@ function actualizaNotasAlu(alumnosT_Fisi) {
         3
       ).toFixed(1);
     }
-    // inputPNota.addEventListener("change", (event) => {
-    //   const nota = parseInt(event.target.value);
-    //   alumno.p_nota = nota;
-    //   console.log("nota: " + nota + " aaaaa");
-    //   // console.log(alumno.getFirst_name());
-    // });
-    // inputSNota.addEventListener("change", (event) => {
-    //   let nota = parseInt(event.target.value);
-    //   alumno.s_nota = nota;
-    //   alumno.setPnota(nota);
-    //   console.log("nota: " + nota + " bbbbb");
-    // });
-    // inputTNota.addEventListener("change", (event) => {
-    //   const nota = parseInt(event.target.value);
-    //   alumno.t_nota = nota;
-    //   console.log("nota: " + nota + " cccc");
-    // });
+
     i += 1;
-    // alumno.notafinal = (alumno.p_nota + alumno.s_nota + alumno.t_nota) / 3;
-    // console.log("nota: " + alumno.notafinal + "dddd");
-    // console.log("qeqweq");
-    // console.log(alumno);
+
     localStorage.setItem("alumnosT_Fisi", JSON.stringify(alumnosT_Fisi));
   });
 }
@@ -177,16 +149,6 @@ guardarnotas.addEventListener("click", (event) => {
   showStudentsPrincipal(alumnosT_Fisi);
   promedioCursoT.innerHTML = `${promedioCurso(alumnosT_Fisi).toFixed(1)}`;
 });
-// alumnosT_Fisi = alumnosT_Fisi.map(
-//   (alumnoData) =>
-//     new Alumno(
-//       alumnoData.first_name,
-//       alumnoData.last_name,
-//       alumnoData.ci,
-//       alumnoData.age
-//     )
-// );
-// actualizaFnota
 
 ordAsc.addEventListener("click", (event) => {
   alumnosT_Fisi = ordenarNotasAsc(alumnosT_Fisi);

@@ -20,6 +20,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .carousel-item img {
@@ -29,7 +30,13 @@ main {
 }
 
 .carousel {
+  margin-top: 30px;
   padding: 0px 30px 0px 30px;
+  width: 60%;
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* justify-content: center; */
+  /* align-items: center; */
   /* height: 300px; */
 }
 .carousel-inner {

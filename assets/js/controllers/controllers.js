@@ -1,5 +1,4 @@
 import { Alumno } from "../../data/class.js";
-// import { lalumnos } from "../alumnos.js";
 export let formValues = {};
 
 export function onChangeInput(event) {
