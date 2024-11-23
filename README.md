@@ -2,7 +2,6 @@
 
 Base de Datos para alumnos con HTML, CSS, Bootstrap y JS, tambien tiene agregado algo de LocalStorage
 
-````markdown
 # Instrucciones para interactuar con la página
 
 ## Página Principal
@@ -18,7 +17,6 @@ const cuentas = {
   ],
 };
 ```
-````
 
 ## Gestión de Cursos y Materias
 
