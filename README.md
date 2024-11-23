@@ -18,6 +18,10 @@ const cuentas = {
 };
 ```
 
+![Login](./assets/images/login.png "LOGIN")
+![Login](./assets/images/login2.png "LOGIN")
+![MAIN](./assets/images/main.png "MAIN")
+
 ## Gestión de Cursos y Materias
 
 Los cursos disponibles son **PRIMERO**, **SEGUNDO** y **TERCERO**. Cada curso incluye las siguientes materias:
@@ -27,6 +31,9 @@ Los cursos disponibles son **PRIMERO**, **SEGUNDO** y **TERCERO**. Cada curso in
 - **QUÍMICA**
 
 Por defecto, todas las materias estarán vacías. Puedes gestionar alumnos y notas desde las siguientes pestañas:
+
+![CURSOS](./assets/images/cursos.png "CURSOS")
+![ALUMNOS](./assets/images/alumnos2.png "ALUMNOS")
 
 ### 1. Gestionar Alumnos
 
@@ -43,6 +50,12 @@ En esta sección, puedes realizar las siguientes acciones:
 
 - **Filtrar por Nombre o CI**:  
   Puedes filtrar a los alumnos ingresando su nombre o su cédula de identidad.
+
+  ![Gestion de Alumnos](./assets/images/alumnos.png "Gestion de Alumnos")
+  ![Gestion de Alumnos](./assets/images/alumnos2.png "Lista de Alumnos")
+  ![Gestion de Alumnos](./assets/images/alumnos5.png "Agregar Alumnos")
+  ![Gestion de Alumnos](./assets/images/alumnos3.png.png "Fltrar Alumnos")
+  ![Gestion de Alumnos](./assets/images/alumnos4.png "Resultado del Filtro")
 
 ### 2. Gestión de Cursos
 
@@ -63,7 +76,12 @@ Desde esta pestaña, puedes interactuar con los cursos disponibles. Las opciones
   Puedes ordenar la lista de alumnos en **orden ascendente** o **orden descendente**.
 
 - **Filtrar Alumnos**:  
-  Aplica filtros para visualizar alumnos específicos según tus criterios.
+   Aplica filtros para visualizar alumnos específicos según tus criterios.
+  ![Gestion de Cursos](./assets/images/cursos.png "Gestion de Cursos")
+  ![Gestion de Cursos](./assets/images/cursos2.png "Curso")
+  ![Gestion de Cursos](./assets/images/cursos3.png "Agregar alumnos a la materia")
+  ![Gestion de Cursos](./assets/images/cursos4.png "Alumnos del curso")
+  ![Gestion de Cursos](./assets/images/cursos5.png "Alumnos de otro curso")
 
 ## Persistencia de Datos
 
